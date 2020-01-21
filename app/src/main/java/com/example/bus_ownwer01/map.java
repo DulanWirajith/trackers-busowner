@@ -11,9 +11,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
 
 
 /**
@@ -46,6 +49,12 @@ public class map extends Fragment implements OnMapReadyCallback {
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-
+        map=googleMap;
+        LatLng pp=new LatLng(8.352865,80.502446);
+        MarkerOptions option =new MarkerOptions();
+        option.position(pp).title("Mihinthale");
+        map.addMarker(option);
+        map.moveCamera(CameraUpdateFactory.newLatLng(pp));
+        map.animateCamera( CameraUpdateFactory.zoomTo( 16.0f ) );
     }
 }
