@@ -32,7 +32,7 @@
                 android:id="@+id/imageView4"
                 android:layout_width="392dp"
                 android:layout_height="187dp"
-                android:alpha="0.7"
+                android:alpha="0.9"
                 android:scaleType="fitXY"
                 android:src="@drawable/busback01"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -49,14 +49,15 @@
                 android:layout_height="100dp"
                 android:layout_gravity="center"
                 android:alpha="0.9"
-                android:src="@drawable/driver"
-                app:civ_border_color="#FF000000"
-                app:civ_border_width="2dp"
+                android:src="@drawable/bus02"
+                app:civ_border_color="#009688"
+                app:civ_border_width="4dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.058"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.091"
+                app:layout_constraintVertical_bias="0.042"
                 tools:ignore="MissingConstraints" />
 
             <TextView
@@ -64,13 +65,15 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="profile"
-                android:textColor="@color/common_google_signin_btn_text_dark_focused"
-                android:textSize="24sp"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="36sp"
+                android:textStyle="bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.59"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/imageView4"
-                app:layout_constraintVertical_bias="0.023" />
+                app:layout_constraintVertical_bias="0.064" />
 
             <TextView
                 android:id="@+id/textView3"
@@ -177,8 +180,10 @@
 
             <Button
                 android:id="@+id/button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="108dp"
+                android:layout_height="51dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/custom_button"
                 android:text="Edit"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
