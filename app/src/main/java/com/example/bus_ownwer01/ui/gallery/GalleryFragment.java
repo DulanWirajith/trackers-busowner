@@ -13,10 +13,15 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.example.bus_ownwer01.R;
+import com.example.bus_ownwer01.model.BackgroundTask;
 
 public class GalleryFragment extends Fragment {
 
     private GalleryViewModel galleryViewModel;
+    private TextView fname;
+    private TextView lname;
+    private TextView ownerMail;
+    private TextView ownerContact;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
@@ -30,6 +35,18 @@ public class GalleryFragment extends Fragment {
                 textView.setText(s);
             }
         });
+
+        fname = root.findViewById(R.id.fName);
+        fname.setText(BackgroundTask.getOwnerfirstName());
+        lname=root.findViewById(R.id.lName);
+        lname.setText(BackgroundTask.getOwnerlastName());
+        ownerMail =root.findViewById(R.id.ownerMail);
+        ownerMail.setText(BackgroundTask.getOwnerMail());
+        ownerContact=root.findViewById(R.id.ownerContac);
+        String phonenum= String.valueOf(BackgroundTask.getOwnerContact());
+//        System.out.println(BackgroundTask.getOwnerContact());
+        ownerContact.setText(phonenum);
+
         return root;
     }
 }
